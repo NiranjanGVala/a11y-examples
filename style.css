@@ -1,0 +1,20 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#wrapper    {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aria-button {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    width: auto;
+    border-radius: 10px;
+    padding: 15px 25px;
+    font-size: large;
+    }
