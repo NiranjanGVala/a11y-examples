@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Before ARIA live</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Before ARIA live</h1>
+        <p>See the live cricket score from the sticky strip at the faar bottom side of this screen. Screen
+            readers are not automatically notified for the latest updated score from the
+            strip below unless the screen reader curser is not on the strip.</p>
+        <p>The score board will be updated every 10 seconds. I will add ARIA live attributes tomorrow for the sticky
+            strip below.</p>
+    </div>
+    <div id="score" role="region" aria-label="Score">
+        <div id="score-inner">
+            <span id="country">IND</span>
+            <span id="runs">0</span>
+            <span id="sep">-</span>
+            <span id="wickets">0</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
