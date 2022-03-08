@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>After ARIA live hidden</title>
+</head>
+
+<body>
+    <div id="container">
+        <h1>After ARIA live hidden</h1>
+        <p>See the live cricket score from the sticky strip at the faar bottom side of this screen. Screen
+            readers are automatically notified for the latest updated score from the
+            strip below regardless of where the screen reader curser is.</p>
+        <p>The score board will be updated every 10 seconds. This time, I have added ARIA live attributes into the
+            hidden div that is serving for the equivalent purpose.</p>
+        <p>Sometime, It become essential that same level of information needs to be given to the screen reader using
+            ARIA in a nice format so a screen reader user can also understand the same level of information as a sighted
+            person and they do not have to use their cognitive functions conciously to understand the information.</p>
+    </div>
+    <div id="score" role="region" aria-label="Score board">
+        <div id="score-inner">
+            <span id="country">IND</span>
+            <span id="runs">0</span>
+            <span id="sep">-</span>
+            <span id="wickets">0</span>
+        </div>
+        <div id="sr-only-score-board" aria-live="polite" aria-atomic="true"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

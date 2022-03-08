@@ -4,6 +4,11 @@ function getRandomArbitraryScore(min, max) {
     return Math.floor(Math.random() * (max - min) + min)
 }
 
+function renderNiceScore(country, scoreCounts, wicketCounts) {
+    let scoreboardTemplate = `Current score: ${country} ${scoreCounts} runs per ${wicketCounts} wickets.`
+    document.getElementById("sr-only-score-board").innerHTML = scoreboardTemplate
+}
+
 window.addEventListener("load", () => {
     const courseCounter = setInterval(courseHandler, 10000)
     function courseHandler() {
@@ -15,9 +20,11 @@ window.addEventListener("load", () => {
             if (score === 7) {
                 wicketCounts++
                 document.getElementById("wickets").innerHTML = wicketCounts
+                renderNiceScore("India", scoreCounts, wicketCounts)
             } else {
                 scoreCounts += score
                 document.getElementById("runs").innerHTML = scoreCounts
+                renderNiceScore("India", scoreCounts, wicketCounts)
             }
         }
     }
