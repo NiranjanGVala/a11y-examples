@@ -7,7 +7,6 @@ document.getElementById("tabs-list").addEventListener("click", e => {
             let isPanel = panel.getAttribute("id")
             if (isTab === isPanel) {
                 panel.classList.remove("hidden")
-                e.target.classList.add("active")
             } else {
                 panel.classList.add("hidden")
             }
