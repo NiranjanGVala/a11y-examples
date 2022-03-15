@@ -6,33 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Visual tabs only</title>
+    <title>Tabs with static HTML ARIA</title>
 </head>
 
 <body>
     <div id="container">
         <div id="tabs-list-wrapper">
-            <ul id="tabs-list">
-                <li data-target="description">Description
+            <ul id="tabs-list" role="tablist">
+                <li id="description-tab" role="tab" aria-controls="description" data-target="description">Description
                 </li>
-                <li data-target="reviews">Reviews</li>
-                <li data-target="more">More</li>
+                <li id="reviews-tab" role="tab" aria-controls="reviews" data-target="reviews">Reviews</li>
+                <li id="more-tab" role="tab" aria-controls="more" data-target="more">More</li>
             </ul>
         </div>
         <div id="tabs-panel-wrapper">
-            <div id="description">
+            <div id="description" role="tabpanel" aria-labelledby="description-tab">
                 <h2>Description</h2>
                 <p>Sample description for a fun. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, eius?
                     Illum eos totam commodi, magnam quae facere corporis repellat corrupti deserunt excepturi nulla
                     consequatur vel odit doloremque id maxime ex.</p>
             </div>
-            <div id="reviews" class="hidden">
+            <div id="reviews" class="hidden" role="tabpanel" aria-labelledby="reviews-tab">
                 <h2>Reviews</h2>
                 <p>Sample reviews for a fun. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, eius?
                     Illum eos totam commodi, magnam quae facere corporis repellat corrupti deserunt excepturi nulla
                     consequatur vel odit doloremque id maxime ex.</p>
             </div>
-            <div id="more" class="hidden">
+            <div id="more" class="hidden" role="tabpanel" aria-labelledby="more-tab">
                 <h2>More information</h2>
                 <p>More information for a fun. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor, eius?
                     Illum eos totam commodi, magnam quae facere corporis repellat corrupti deserunt excepturi nulla
