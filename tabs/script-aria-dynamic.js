@@ -7,8 +7,10 @@ function tabClickHandler(e) {
     allTabs.forEach(tab => {
         if (tab === e.target) {
             tab.classList.add("active")
+            tab.setAttribute("aria-selected", "true")
         } else {
             tab.classList.remove("active")
+            tab.removeAttribute("aria-selected")
         }
     })
 }
